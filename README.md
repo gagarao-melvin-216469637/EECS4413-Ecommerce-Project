@@ -9,6 +9,7 @@
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#role division">Contact</a></li>
   </ol>
 </details>
 
@@ -80,6 +81,16 @@ Add stuff we're working on or plan to do
     - [ ] Curl commands
 - [ ] REST
 - [ ] Document Teamwork
+
+<!-- Roles -->
+## Role Divsion
+Arjit Johar
+
+Melvin Gagarao
+
+Sharujan Rajakumar
+
+Varuhn Ruthirakuhan
 
 
 <!-- CONTACT -->
