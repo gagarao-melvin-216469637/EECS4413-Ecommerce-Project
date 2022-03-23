@@ -95,6 +95,8 @@ Add stuff we're working on or plan to do
     - [ ] Curl commands
 - [ ] REST
 - [ ] Document Teamwork
+- [ ] OAuth
+- [ ] MySQL
 
 <!-- Roles -->
 ## Role Divsion
