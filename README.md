@@ -97,6 +97,7 @@ Add stuff we're working on or plan to do
 - [ ] Document Teamwork
 - [ ] OAuth
 - [ ] MySQL
+- [ ] JWT
 
 <!-- Roles -->
 ## Role Divsion
