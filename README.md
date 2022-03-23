@@ -61,7 +61,21 @@ Functional Requirements + UML diagrams + Reasoning
 
 <!-- USAGE -->
 ## Usage
-Use Cases + Sequence Diagrams
+Use Cases + Sequence Diagrams <br></br>
+**Items**
+
+Implemented:
+* GET
+
+Unimplemented:
+* DELETE
+* POST
+* PUT
+
+Test Cases:
+1. SQL Injection: Pass and fail examination (use of ? in query string)
+  *	Examining username.
+  * Customer should not have access to database.
 
 
 
@@ -85,12 +99,24 @@ Add stuff we're working on or plan to do
 <!-- Roles -->
 ## Role Divsion
 Arjit Johar
+* Backend programming (item construction)
+* Front end testing
+* Backend architecture and design
 
 Melvin Gagarao
+* Backend programming (filter item by type and brand)
+* Early REST architecture
+* Backend architecture and design
 
 Sharujan Rajakumar
+* Backend programming (filter item by type and brand)
+* UI implementation
+* Use case generation
 
 Varuhn Ruthirakuhan
+* Backend programming (filter item by type and brand)
+* UI implementation
+* Use case generation
 
 
 <!-- CONTACT -->
