@@ -16,11 +16,12 @@
          <ul>
             <li><img class="product-image"
                th:src="@{|/productImage?code=${prodInfo.code}|}" /></li>
-            <li>Code: <span th:utext="${prodInfo.code}"></span></li>
+            <li>Brand: <span th:utext="${prodInfo.code}"></span></li>
             <li>Name: <span th:utext="${prodInfo.name}"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
             <li>Price: <span th:utext="${#numbers.formatDecimal(prodInfo.price,3,2,'COMMA')}"></span></li>
             <li>
-               <a th:href="@{|/buyProduct?code=${prodInfo.code}|}">Buy Now</a>
+               <a th:href="@{|/buyProduct?code=${prodInfo.code}|}">Add to Cart</a>
             </li>
             <!-- For Manager edit Product -->
             <th:block sec:authorize="hasAuthority('ROLE_MANAGER')">
