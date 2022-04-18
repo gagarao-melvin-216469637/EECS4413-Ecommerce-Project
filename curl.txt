@@ -1,0 +1,9 @@
+curl -XGET 'http://localhost:8080/products'
+curl -XGET 'http://localhost:8080/products/Dell'
+curl -XPOST 'http://localhost:8080/products/code:FakeApple,image:oezcsgsrhzrh,name:Apple iPhone 13 Pro,price:1399.0,date:2022-04-15'
+curl -XDELETE 'http://localhost:8080/products/code:FakeApple,image:oezcsgsrhzrh,name:Apple iPhone 13 Pro,price:1399.0,date:2022-04-15'
+
+curl -XGET 'http://localhost:8080/orders'
+curl -XGET 'http://localhost:8080/orders/0ed3166a-5309-4657-9dd5-07449e602296'
+curl -XPOST 'http://localhost:8080/orders/id:12345,amount:10,customer_address:place2,customer_email:email2,customer_name:name21,customer_phone:2,order_date:2023-04-17,order_num:13'
+curl -XDELETE 'http://localhost:8080/orders/id:12345,amount:10,customer_address:place2,customer_email:email2,customer_name:name21,customer_phone:2,order_date:2023-04-17,order_num:13'
