@@ -1,126 +1,28 @@
 # EECS4413-Ecommerce-Project
 <div id="top"></div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a>
-    <li><a href="#built-with">Built With</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#role division">Contact</a></li>
-  </ol>
-</details>
+<!-- How to Run -->
+1. Download the SQL file ShoppingCart_FINAL.sql.
+2. Launch MySQL Workbench (Tested on Version 8.0 CE).
+3. Select Local instance mySQL80.
+4. Once launched, create a new schema using using the icon at the top of the screen.
+5. Name the schema as you wish (i.e. shoppingcart) and Apply->Apply->Finish.
+6. Next at the top of the screen select Server->Data import.
+7. Select 'Import from Self-Contained File' and navigate to the previously downloaded SQL file.
+8. Select 'Default Target Schema' and choose the schema just created(i.e. shopping cart).
+9. Then select the 'Import Progress' tab at the top and 'Start Import' and the SQL database should be downloaded.
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-The goal is to produce an e-commerce website that meets the frontend and backend expectations of a product specification document.
-
-A convenience company wants to create an online store. You must design, implement, test and deploy a
-web application that supports Customers and Administrators to interact with the e-store.
-
-Registered Customers can execute several use cases, including
-* List catalogue items
-* Filter catalog items by type
-* Filter catalog items by brand
-* View details of a product
-* Add items to shopping cart
-* Edit or remove items from the shopping cart
-* “Check out” by providing credit card information and shipping information to purchase the items in the shopping cart
-* Write reviews on items
-* Register
-* Sign in
-* Sign out
-
-Administrators: are the owners of the store; they have access to the following use case
-* Run Reports on sells
-* Run reports on application usage
-
-You will develop a multi-tier web application, with clear separation between front and back-end. It is
-expected you add an original use case to the above list.
-
-
-<!-- STACK -->
-## Built With
-
-* [Angular.js](https://angular.io/)
-* [Spring](https://spring.io/guides/tutorials/rest/)
-* [AWS](https://aws.amazon.com/)
-* [Apache Derby](https://db.apache.org/derby/)
-
-
-
-<!-- Design -->
-## Design and Reasoning
-Functional Requirements + UML diagrams + Reasoning
-
-
-
-<!-- USAGE -->
-## Usage
-Use Cases + Sequence Diagrams <br></br>
-**Items**
-
-Implemented:
-* GET
-
-Unimplemented:
-* DELETE
-* POST
-* PUT
-
-Test Cases:
-1. SQL Injection: Pass and fail examination (use of ? in query string)
-  *	Examining username.
-  * Customer should not have access to database.
-
-
-
-<!-- USAGE -->
-## TODO List
-Add stuff we're working on or plan to do
-- [x] Add Changelog
-- [x] Setup AWS
-- [x] Setup Derby
-- [x] Make Spring Classes
-- [x] UML Diagrams
-- [x] Sequence Diagrams
-- [x] Use Cases
-    - [x] Specified Cases
-    - [x] Custom Cases
-- [x] Test Case Coverage
-    - [x] Curl commands
-- [x] REST
-- [x] Document Teamwork
-- [x] OAuth
-- [x] MySQL
-- [x] JWT
-
-<!-- Roles -->
-## Role Divsion
-Arjit Johar
-* Backend programming (item construction)
-* Front end testing
-* Backend architecture and design
-
-Melvin Gagarao
-* Backend programming (filter item by type and brand)
-* Early REST architecture
-* Backend architecture and design
-
-Sharujan Rajakumar
-* Backend programming (filter item by type and brand)
-* UI implementation
-* Use case generation
-
-Varuhn Ruthirakuhan
-* Backend programming (filter item by type and brand)
-* UI implementation
-* Use case generation
-
+10. Open this google drive link and download the latest version of the application (.zip): https://drive.google.com/file/d/1nysYfjDqOp74tSOTglzwAT6OaJpfeAZF/view?usp=sharing
+11. Launch Eclipse (Eclipse IDE for Java Enterprise Developers)
+12. Select File->Import then from the drop-down menu select General->Existing Project Into Workspace.
+13. Select archive file and navigate to the downloaded zip file.
+14. Once the project has been successfully imported, open the file and navigate to the application.properties file through KrispyKart/src/main/resources/application.properties.
+15. In line 19, set the schema to your created schema. (i.e. spring.datasource.url=jdbc:mysql://localhost:3306/shoppingcart)
+16. On lines 20 and 21, set your respective username and password for MySQL.
+17. Once saved, navigate to KrispyKartApp.java. (KrispyKart/src/main/java/org.o7planning.krispykart/KrispyKartApp.java)
+18. Right click the application and select Run as -> Java Application. The spring application should show that it is running on the console.
+19. Finally, go to your browser and enter local localhost:8080 to see the application. (tested on Google Chrome)
+20. If you would like to view the admin and manager privileges on the application, for admin enter username: admin, password: admin111. For manager enter username: manager, Password: manager222.
 
 <!-- CONTACT -->
 ## Contact
