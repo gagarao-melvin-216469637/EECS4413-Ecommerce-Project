@@ -2,6 +2,7 @@
 <div id="top"></div>
 
 <!-- How to Run -->
+##How to Run
 1. Download the SQL file ShoppingCart_FINAL.sql.
 2. Launch MySQL Workbench (Tested on Version 8.0 CE).
 3. Select Local instance mySQL80.
