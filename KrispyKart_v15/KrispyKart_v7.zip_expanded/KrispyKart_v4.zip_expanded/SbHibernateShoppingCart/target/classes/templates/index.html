@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8">
+      <title>Krispy Kart Shopping</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+   </head>
+   <body>
+      <th:block th:include="/header"></th:block>
+   
+      <th:block th:include="/menu"></th:block>
+      
+      <BR />
+      <div class="page-title">Welcome to Krispy Kart, How may we help you today?</div>
+      <div class="demo-container">
+         <h3>Here are some features our application offers:</h3>
+         <ul>
+            <li>- Admin permissions</li>
+            <li>- Manager permissions</li>
+            <li>- Account Registration</li>
+            <li>- Item purchasing</li>
+            <li>- Item removal</li>
+            <li>- Item creation</li>
+         </ul>
+      </div>
+   
+      <th:block th:include="/footer"></th:block>
+   </body>
+   
+</html>

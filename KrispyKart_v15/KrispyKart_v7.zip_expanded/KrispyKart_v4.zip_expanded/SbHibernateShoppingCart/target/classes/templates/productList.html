@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+   xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+   <head>
+      <meta charset="UTF-8">
+      <title>Product List</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+   </head>
+   <body>
+      <th:block th:include="/header"></th:block>
+      <th:block th:include="/menu"></th:block>
+      
+      <div class="page-title">Product List</div>
+       
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Google'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Google|}" /></li>
+            <li>Brand: <span th:utext="Google"></span></li>
+            <li>Name: <span th:text="'Google ' + 'Pixel ' + '6'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(799,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Google|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Google|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'OnePlus'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=OnePlus|}" /></li>
+            <li>Brand: <span th:utext="OnePlus"></span></li>
+            <li>Name: <span th:text="'OnePlus ' + '10 ' + 'Pro'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(989,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=OnePlus|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=OnePlus|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Huawei'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Huawei|}" /></li>
+            <li>Brand: <span th:utext="Huawei"></span></li>
+            <li>Name: <span th:text="'Huawei ' + 'P40 '"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1499,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Huawei|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Huawei|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'BlackBerry'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=BlackBerry|}" /></li>
+            <li>Brand: <span th:utext="BlackBerry"></span></li>
+            <li>Name: <span th:text="'BlackBerry ' + 'KEY2 '"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1189,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=BlackBerry|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=BlackBerry|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Nokia'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Nokia|}" /></li>
+            <li>Brand: <span th:utext="Nokia"></span></li>
+            <li>Name: <span th:text="'Nokia ' + '9 ' + 'PureView'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(640,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Nokia|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Nokia|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Dell'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Dell|}" /></li>
+            <li>Brand: <span th:utext="Dell"></span></li>
+            <li>Name: <span th:text="'Dell ' + 'XPS ' + '13'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1399.99,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Dell|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Dell|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Samsung'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Samsung|}" /></li>
+            <li>Brand: <span th:utext="Samsung"></span></li>
+            <li>Name: <span th:text="'Samsung ' + 'Galaxy ' + 'S22'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1169.99,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Samsung|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Samsung|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Apple'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Apple|}" /></li>
+            <li>Brand: <span th:utext="Apple"></span></li>
+            <li>Name: <span th:text="'Apple ' + 'iPhone ' + '13 ' + 'Pro'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1399.00,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Apple|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Apple|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Microsoft'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Microsoft|}" /></li>
+            <li>Brand: <span th:utext="Microsoft"></span></li>
+            <li>Name: <span th:text="'Microsoft ' + 'Surface ' + 'Pro ' + '8'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1579.99,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Microsoft|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Microsoft|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Lenovo'} ">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Lenovo|}" /></li>
+            <li>Brand: <span th:utext="Lenovo"></span></li>
+            <li>Name: <span th:text="'ThinkPad ' + 'X1 ' + 'Carbon ' + 'Gen ' + '9'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1961.40,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Lenovo|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Lenovo|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <div th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Laptop'} ">
+         <div class="product-preview-container">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Dell|}" /></li>
+            <li>Brand: <span th:utext="Dell"></span></li>
+            <li>Name: <span th:text="'Dell ' + 'XPS ' + '13'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1399.99,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Dell|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Dell|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+         </div>
+         <div class="product-preview-container">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Microsoft|}" /></li>
+            <li>Brand: <span th:utext="Microsoft"></span></li>
+            <li>Name: <span th:text="'Microsoft ' + 'Surface ' + 'Pro ' + '8'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1579.99,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Microsoft|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Microsoft|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+         </div>
+         <div class="product-preview-container">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Lenovo|}" /></li>
+            <li>Brand: <span th:utext="Lenovo"></span></li>
+            <li>Name: <span th:text="'ThinkPad ' + 'X1 ' + 'Carbon ' + 'Gen ' + '9'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1961.40,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Lenovo|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Lenovo|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+         </div>
+      </div>
+      
+      <div th:if="${#request.getParameter('q') != null and #request.getParameter('q') == 'Phone'} ">
+         <div class="product-preview-container">
+         	<ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Google|}" /></li>
+            <li>Brand: <span th:utext="Google"></span></li>
+            <li>Name: <span th:text="'Google ' + 'Pixel ' + '6'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(799,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Google|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Google|}">Edit Product</a>
+               </li>
+            </th:block>
+            </ul>
+         </div>
+         <div class="product-preview-container">
+         	<ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=OnePlus|}" /></li>
+            <li>Brand: <span th:utext="OnePlus"></span></li>
+            <li>Name: <span th:text="'OnePlus ' + '10 ' + 'Pro'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(989,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=OnePlus|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=OnePlus|}">Edit Product</a>
+               </li>
+            </th:block>
+            </ul>
+         </div>
+      	 <div class="product-preview-container">
+         	<ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Huawei|}" /></li>
+            <li>Brand: <span th:utext="Huawei"></span></li>
+            <li>Name: <span th:text="'Huawei ' + 'P40 '"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1499,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Huawei|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Huawei|}">Edit Product</a>
+               </li>
+            </th:block>
+            </ul>
+         </div>
+         <div class="product-preview-container">
+         	<ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=BlackBerry|}" /></li>
+            <li>Brand: <span th:utext="BlackBerry"></span></li>
+            <li>Name: <span th:text="'BlackBerry ' + 'KEY2 '"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1189,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=BlackBerry|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=BlackBerry|}">Edit Product</a>
+               </li>
+            </th:block>
+            </ul>
+         </div>
+         <div class="product-preview-container">
+         	<ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Nokia|}" /></li>
+            <li>Brand: <span th:utext="Nokia"></span></li>
+            <li>Name: <span th:text="'Nokia ' + '9 ' + 'PureView'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(640,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Nokia|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Nokia|}">Edit Product</a>
+               </li>
+            </th:block>
+            </ul>
+      	 </div>
+      	 <div class="product-preview-container">
+         	<ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Samsung|}" /></li>
+            <li>Brand: <span th:utext="Samsung"></span></li>
+            <li>Name: <span th:text="'Samsung ' + 'Galaxy ' + 'S22'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1169.99,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Samsung|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Samsung|}">Edit Product</a>
+               </li>
+            </th:block>
+            </ul>
+         </div>
+         <div class="product-preview-container">
+         	<ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=Apple|}" /></li>
+            <li>Brand: <span th:utext="Apple"></span></li>
+            <li>Name: <span th:text="'Apple ' + 'iPhone ' + '13 ' + 'Pro'"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+       		<li>Price: <span th:text="${#numbers.formatDecimal(1399.00,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=Apple|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=Apple|}">Edit Product</a>
+               </li>
+            </th:block>
+            </ul>
+         </div>
+      </div>
+      
+      <div class="product-preview-container" th:if="${#request.getParameter('q') == null}" th:each="prodInfo : ${paginationProducts.list}">
+         <ul>
+            <li><img class="product-image"
+               th:src="@{|/productImage?code=${prodInfo.code}|}" /></li>
+            <li>Brand: <span th:utext="${prodInfo.code}"></span></li>
+            <li>Name: <span th:utext="${prodInfo.name}"></span></li>
+       <!-- <li>Type: <span th:utext="${prodInfo.type}"></span></li> -->
+            <li>Price: <span th:utext="${#numbers.formatDecimal(prodInfo.price,3,2,'COMMA')}"></span></li>
+            <li>
+               <a th:href="@{|/buyProduct?code=${prodInfo.code}|}">Add to Cart</a>
+            </li>
+            <!-- For Manager edit Product -->
+            <th:block sec:authorize="hasAuthority('ROLE_ADMIN')">
+               <li>
+                 <a style="color:red;"
+                    th:href="@{|/admin/product?code=${prodInfo.code}|}">Edit Product</a>
+               </li>
+            </th:block>
+         </ul>
+      </div>
+      
+      <br/>
+      <div class="page-navigator" th:if="${paginationProducts.totalPages > 1} and ${#request.getParameter('q') == null}">
+         <th:block th:each="page : ${paginationProducts.navigationPages}">
+        
+            <a th:href="@{|/productList?page=${page}|}" th:if="${page != -1}"
+               class="nav-item" th:utext="${page}"></a>
+              
+            <span class="nav-item" th:if="${page == -1}"> ... </span>
+            
+         </th:block>
+      </div>
+      
+      <th:block th:include="/footer"></th:block>
+      
+   </body>
+</html>

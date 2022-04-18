@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Implementation-Title: krispykart
+Implementation-Version: 0.0.1-SNAPSHOT
+Main-Class: org.o7planning.krispykart.config.KrispyKartApp
+Created-By: Maven Integration for Eclipse
+
