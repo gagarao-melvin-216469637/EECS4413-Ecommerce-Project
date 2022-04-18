@@ -24,7 +24,7 @@
 17. Once saved, navigate to KrispyKartApp.java. (KrispyKart/src/main/java/org.o7planning.krispykart/KrispyKartApp.java)
 18. Right click the application and select Run as -> Java Application. The spring application should show that it is running on the console.
 19. Finally, go to your browser and enter local localhost:8080 to see the application. (tested on Google Chrome)
-20. If you would like to view the admin and manager privileges on the application, for admin enter username: admin, password: admin111. For manager enter username: manager, Password: manager222.
+20. If you would like to view the admin and manager privileges on the application, for admin enter username: admin, password: admin111. For manager enter username: manager, password: manager222.
 
 <!-- CONTACT -->
 ## Contact
