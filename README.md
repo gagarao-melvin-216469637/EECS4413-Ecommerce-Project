@@ -83,21 +83,21 @@ Test Cases:
 ## TODO List
 Add stuff we're working on or plan to do
 - [x] Add Changelog
-- [ ] Setup AWS
-- [ ] Setup Derby
-- [ ] Make Spring Classes
-- [ ] UML Diagrams
-- [ ] Sequence Diagrams
-- [ ] Use Cases
-    - [ ] Specified Cases
-    - [ ] Custom Cases
-- [ ] Test Case Coverage
-    - [ ] Curl commands
-- [ ] REST
-- [ ] Document Teamwork
-- [ ] OAuth
-- [ ] MySQL
-- [ ] JWT
+- [x] Setup AWS
+- [x] Setup Derby
+- [x] Make Spring Classes
+- [x] UML Diagrams
+- [x] Sequence Diagrams
+- [x] Use Cases
+    - [x] Specified Cases
+    - [x] Custom Cases
+- [x] Test Case Coverage
+    - [x] Curl commands
+- [x] REST
+- [x] Document Teamwork
+- [x] OAuth
+- [x] MySQL
+- [x] JWT
 
 <!-- Roles -->
 ## Role Divsion
