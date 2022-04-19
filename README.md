@@ -13,7 +13,6 @@
 7. Select 'Import from Self-Contained File' and navigate to the previously downloaded SQL file.
 8. Select 'Default Target Schema' and choose the schema just created(i.e. shopping cart).
 9. Then select the 'Import Progress' tab at the top and 'Start Import' and the SQL database should be downloaded.
-
 10. Open this google drive link and download the latest version of the application (.zip): https://drive.google.com/file/d/1nysYfjDqOp74tSOTglzwAT6OaJpfeAZF/view?usp=sharing
 11. Launch Eclipse (Eclipse IDE for Java Enterprise Developers)
 12. Select File->Import then from the drop-down menu select General->Existing Project Into Workspace.
@@ -25,6 +24,35 @@
 18. Right click the application and select Run as -> Java Application. The spring application should show that it is running on the console.
 19. Finally, go to your browser and enter local localhost:8080 to see the application. (tested on Google Chrome)
 20. If you would like to view the admin and manager privileges on the application, for admin enter username: admin, password: admin111. For manager enter username: manager, password: manager222.
+
+<h1>REST API</h1>
+Below are examples of the implemented REST API for products and orders.
+
+<h2>Product</h2>
+GET http://localhost:8080/products
+GET http://localhost:8080/products → [ {"code": "Apple2", "image": "4AAQS", "name": "Apple iPhone 13 Pro", "price": 1399.0, "date": "2022-04-15"}, {"code": "BlackBerry", "image": "Ih2dWVkAAA", "name": "BlackBerry KEY2", "price": 1189.0, "date": "2022-04-16"}
+}, … ]
+
+GET http://localhost:8080/products/{id}
+GET http://localhost:8080/products/Google → [ {"code": "Google", "image": "9KWVIgABA", "name": "Pixel 2", "price": 1129.0, "date": "2022-04-17"} ]
+
+POST http://localhost:8080/products/{product}
+POST http://localhost:8080/products{"code": "Fake", "image": "9KWVIgABA", "name": "Pixel 2", "price": 1129.0, "date": "2022-04-17"} → Adds to MySQL database if not already present
+
+DELETE http://localhost:8080/products/{product}
+DELETE http://localhost:8080/products{"code": "Google", "image": "9KWVIgABA", "name": "Pixel 2", "price": 1129.0, "date": "2022-04-17"} → Removes matching product
+
+<h2>Orders</h2>
+GET http://localhost:8080/orders
+GET http://localhost:8080/orders → [ {"id": "0ed3166a-5309","amount": 989.0, "customer_address": "94 Headquarters Road", "customer_email": "shield@email.com", "customer_name": "Steve Rogers", "customer_phone": "9687590143", "order_date": "2022-04-17", "order_num": 5}, {"id": "1163bfcb", "amount": 4730.389999999999, "customer_address": "77 Crossbow Road", "customer_email": "dixon@email.com", "customer_name": "Daryl Dixon", "customer_phone": "2345678901", "order_date": "2022-04-16", "order_num": 2} }, … ]
+
+GET http://localhost:8080/orders/{id}
+GET http://localhost:8080/orders{0ed3166a} → [ {"id": "0ed3166a","amount": 989.0, "customer_address": "94 Headquarters Road", "customer_email": "shield@email.com", "customer_name": "Steve Rogers", "customer_phone": "9687590143", "order_date": "2022-04-17", "order_num": 5} ]
+POST http://localhost:8080/orders/{order}
+POST http://localhost:8080/orders{"id": "iu7d78","amount": 989.0, "customer_address": "94 Headquarters Road", "customer_email": "shield@email.com", "customer_name": "Steve Rogers", "customer_phone": "9687590143", "order_date": "2022-04-17", "order_num": 5} → Adds to MySQL database if not already present
+
+DELETE http://localhost:8080/orders/{order}
+DELETE http://localhost:8080/orders{"id": "iu7d78","amount": 989.0, "customer_address": "94 Headquarters Road", "customer_email": "shield@email.com", "customer_name": "Steve Rogers", "customer_phone": "9687590143", "order_date": "2022-04-17", "order_num": 5} → Removes matching product
 
 <!-- CONTACT -->
 ## Contact
