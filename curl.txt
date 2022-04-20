@@ -6,5 +6,4 @@ curl -X DELETE http://localhost:8080/products/FakeApple
 curl -X GET http://localhost:8080/orders
 curl -X GET http://localhost:8080/orders/0ed3166a-5309-4657-9dd5-07449e602296
 curl -X POST http://localhost:8080/orders -H "Content-Type: application/json" --data-raw "{\"id\": \"12345\",\"amount\": 10,\"customer_address\": \"place1\",\"customer_email\": \"email\",\"customer_name\": \"name\",\"customer_phone\": \"416\",\"order_date\": \"2023-04-16\",\"order_num\": \"13\"}"
-curl -X POST http://localhost:8080/orders/?id:12345,amount:10,customer_address:place2,customer_email:email2,customer_name:name21,customer_phone:2,order_date:2023-04-17,order_num:13
 curl -X DELETE http://localhost:8080/orders/12345
